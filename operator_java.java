@@ -15,6 +15,8 @@ public class operator_java {
 		System.out.println("You are playing a game! Press q or Q to quit");
 		String response = sc.next();
 		
+		// .equals is also a == 
+		
 		if(!response.equals("q") && !response.equals("Q"))
 		{
 			System.out.println("Your are still playing the game *pew pew*");
@@ -23,6 +25,15 @@ public class operator_java {
 		{
 			System.out.println("You quit the game");
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		sc.close();
 	}
 }
