@@ -4,25 +4,30 @@ import java.util.Scanner;
 
 public class FIBONACCI_SERIES {
 
-	public static void printFIBONACCI(int n)
+	public static int printFIBONACCI(int n)
 	{
-		int a=0,b=1,c;
-		for (int i = 2; i < n; i++)
-	       {
-	      c= a + b;
-	      a = b;
-	      b = c;
-	          System.out.print (c + " , ");
-	       }
+		int t1=0;
+		int t2=1;
+		for (int i = 1; i <= n; ++i)
+        {
+            System.out.print(t1 + " ");
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+		return t2;
+		
 	}
 	
 	public static void main(String[] args) {
-		int a, b;
+		
 		Scanner sc= new Scanner(System.in);
 		System.out.println("Enter the number To find fibonacci series: ");
 		int n = sc.nextInt();
 		
-		int c = printFIBONACCI(n);
+		int t2 = printFIBONACCI(n);
+		
+		 System.out.println("First " + t2 + " terms of fibonnaci series: ");
 		
 		sc.close();
 	}
